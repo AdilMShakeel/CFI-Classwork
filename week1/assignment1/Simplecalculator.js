@@ -1,10 +1,14 @@
 var readlineSync = require('readline-sync');
 
+// Only ask one input when performing root
+
 console.log("(:__________Simple_Calculator__________:)");
 console.log("Select the operation you want to perform");
 console.log("press + for addition\n press - for subraction\n press % for modulus\n press * for multiplication\n press / for division\n press ** to add power\n press r for root");
 
 var c = 1 / 2;
+
+//Switch case used inorder to ask only required question according to operation being performed
 
 var operator = readlineSync.question("Please enter what operation you want to perform:");
 switch (operator) {
@@ -39,6 +43,9 @@ switch (operator) {
         console.log("Invalid input")
         break;
 }
+
+//After taking input answers are again delcared using switch case again
+
 switch (operator) {
     case "r":
         console.log(`Root of ${a} is ${a ** c} is `);
